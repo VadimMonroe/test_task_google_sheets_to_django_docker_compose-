@@ -1,0 +1,18 @@
+version: "3.9"
+
+services:
+  app:
+    build: .
+    ports:
+      - 8000:8000
+
+  db:
+    image: postgres
+    volumes:
+      - ./pg_db_data:/var/lib/postgresql/data/
+    container_name: sheets_postgres_db
+    restart: always
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres

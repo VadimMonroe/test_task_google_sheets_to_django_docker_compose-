@@ -1,7 +1,5 @@
 <h1>Directions to Run</h1>
 
-docker build .
+docker-compose up
 
-docker images (take last image)
-
-docker run --publish 8000:8000 (paste id image)
+http://127.0.0.1:8000
